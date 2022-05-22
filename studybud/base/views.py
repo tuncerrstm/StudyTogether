@@ -3,6 +3,7 @@ from email import message
 import imp
 from multiprocessing import context
 from pydoc import pager
+from pydoc_data.topics import topics
 from unicodedata import name
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -102,6 +103,15 @@ def room(request, pk):
 
     context = {'room': room, 'room_messages': room_messages, 'paticipants': paticipants}
     return render(request, 'base/room.html', context)
+
+def userProfile(request, pk):
+    user = User.objects.get(id=pk)
+    rooms = user.room_set.all()
+    room_messages = user.message_set.all()
+    topics = Topic.objects.all()
+    context = {'user': user, 'rooms': rooms, 'room_messages': room_messages, 'topics': topics}
+    return render(request, 'base/profile.html', context)
+
 
 @login_required(login_url='login')
 def createRoom(request):
