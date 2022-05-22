@@ -1,5 +1,8 @@
+from cmath import log
+from email import message
 import imp
 from multiprocessing import context
+from pydoc import pager
 from unicodedata import name
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
@@ -8,7 +11,8 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
-from .models import Room, Topic
+from django.contrib.auth.forms import UserCreationForm
+from .models import Message, Room, Topic, Message
 from .forms import RoomForm
 
 
@@ -21,12 +25,12 @@ from .forms import RoomForm
 # ]
 
 def loginPage(request):
-
+    page = 'login'
     if request.user.is_authenticated:
         return redirect('home')
 
     if request.method == 'POST':
-        username = request.POST.get('username')
+        username = request.POST.get('username').lower()
         password = request.POST.get('password')
 
         try:
@@ -42,13 +46,29 @@ def loginPage(request):
         else:
             messages.error(request, 'Username or Password does not exist')
 
-    context = {}
+    context = {'page': page}
     return render(request, 'base/login_register.html', context)
 
 
 def logoutUser(request):
     logout(request)
     return redirect('home')
+
+def registerPage(request):
+    form = UserCreationForm()
+
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save(commit=False)
+            user.username = user.username.lower()
+            user.save()
+            login(request, user)
+            return redirect('home')
+        else:
+            messages.error(request, 'An error occured during registration')
+
+    return render(request, 'base/login_register.html', {'form': form})
 
 
 def home(request):
@@ -68,7 +88,14 @@ def home(request):
 
 def room(request, pk):
     room = Room.objects.get(id=pk)
-    context = {'room': room}
+    room_messages = room.message_set.all().order_by('-created')
+
+    if request.method == 'post':
+        message = Message.objects.create(
+            
+        )
+
+    context = {'room': room, 'room_messages': room_messages}
     return render(request, 'base/room.html', context)
 
 @login_required(login_url='login')
