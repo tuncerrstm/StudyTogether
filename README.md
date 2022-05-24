@@ -18,5 +18,5 @@ Our project was created using the code first methodology.
   <b>Website Template Image</b>
   <br />
   <a href="https://github.com/tuncerrstm/StudyTogether">
-    <img width=700 src="https://github.com/tuncerrstm/StudyTogether/blob/main/studybud/static/images/StudyTogether.png"  alt="StudyTogether">
+    <img width=980 src="https://github.com/tuncerrstm/StudyTogether/blob/main/studybud/static/images/StudyTogether.png"  alt="StudyTogether">
   </a>
