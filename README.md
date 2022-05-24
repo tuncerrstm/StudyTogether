@@ -20,3 +20,5 @@ Our project was created using the code first methodology.
   <a href="https://github.com/tuncerrstm/StudyTogether">
     <img width=980 src="https://github.com/tuncerrstm/StudyTogether/blob/main/studybud/static/images/StudyTogether.png"  alt="StudyTogether">
   </a>
+
+  Project is completed.
