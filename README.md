@@ -1,5 +1,5 @@
 # StudyTogether
-## Yardımlaşma Platformu
+## Yardımlaşma Platformu : Python Django Projesi
 
 Çalışma arkadaşını bulup eksik olduğun konularda yardımlaştığın bir eğitim platformu projesidir.
 
