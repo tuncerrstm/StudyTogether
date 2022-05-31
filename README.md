@@ -18,7 +18,19 @@ Our project was created using the code first methodology.
   <b>Website Template Image</b>
   <br />
   <a href="https://github.com/tuncerrstm/StudyTogether">
-    <img width=980 src="https://github.com/tuncerrstm/StudyTogether/blob/main/studybud/static/images/StudyTogether.png"  alt="StudyTogether">
+    <img width=980 src="https://raw.githubusercontent.com/tuncerrstm/StudyTogether/main/studybud/static/images/project-images/project1.png"  alt="StudyTogether">
+  </a>
+  <br />
+  <a href="https://github.com/tuncerrstm/StudyTogether">
+    <img width=980 src="https://raw.githubusercontent.com/tuncerrstm/StudyTogether/main/studybud/static/images/project-images/project2.png"  alt="StudyTogether">
+  </a>
+  <br />
+  <a href="https://github.com/tuncerrstm/StudyTogether">
+    <img width=980 src="https://raw.githubusercontent.com/tuncerrstm/StudyTogether/main/studybud/static/images/project-images/project3-room.png"  alt="StudyTogether">
+  </a>
+  <br />
+  <a href="https://github.com/tuncerrstm/StudyTogether">
+    <img width=980 src="https://raw.githubusercontent.com/tuncerrstm/StudyTogether/main/studybud/static/images/project-images/project4-topics.png"  alt="StudyTogether">
   </a>
 
   Project is completed.
