@@ -12,3 +12,13 @@
 - Code First
 
 Our project was created using the code first methodology.
+
+<br />
+<p align="left">
+  <b>Website Template Image</b>
+  <br />
+  <a href="https://github.com/tuncerrstm/StudyTogether">
+    <img width=980 src="https://github.com/tuncerrstm/StudyTogether/blob/main/studybud/static/images/StudyTogether.png"  alt="StudyTogether">
+  </a>
+
+  Project is completed.
